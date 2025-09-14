@@ -30,6 +30,11 @@ function Home() {
     const state = Route.useLoaderData()
     const router = useRouter()
 
+    const classes = {
+        container: 'p-4',
+        button: 'flex items-center rounded-md border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none group',
+    }
+
     const handleClick = () => {
         void updateCount({ data: 1 }).then(() => {
             void router.invalidate()
@@ -37,11 +42,14 @@ function Home() {
     }
 
     return (
-        <button
-            type="button"
-            onClick={handleClick}
-        >
-            {`ADD 1 TO ${state.toString()}?`}
-        </button>
+        <div className={classes.container}>
+            <button
+                type="button"
+                className={classes.button}
+                onClick={handleClick}
+            >
+                {`ADD 1 TO ${state.toString()}?`}
+            </button>
+        </div>
     )
 }

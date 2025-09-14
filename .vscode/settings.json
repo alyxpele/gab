@@ -1,4 +1,19 @@
 {
+    // tailwind
+    "editor.quickSuggestions": {
+        "strings": "on",
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        // variables
+        ".*classes",
+        ".*styles",
+    ],
+
     // cSpell
     "cSpell.words": [
     ]
