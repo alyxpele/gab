@@ -6,6 +6,7 @@ import {
     HeadContent,
     Scripts,
 } from '@tanstack/react-router'
+import { materialSymbolsUrl } from '@/components/utils/MaterialSymbols/constants'
 import appCss from '@/styles/app.css?url'
 
 export const Route = createRootRoute({
@@ -23,6 +24,9 @@ export const Route = createRootRoute({
             },
         ],
         links: [
+            { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+            { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
+            { rel: 'stylesheet', href: materialSymbolsUrl },
             { rel: 'stylesheet', href: appCss },
         ],
     }),
