@@ -4,6 +4,7 @@
  */
 export const availableSymbols = [
     'star',
+    'more_time',
 ] as const
 
 export type MaterialSymbolName = typeof availableSymbols[number]
