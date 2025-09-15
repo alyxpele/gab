@@ -24,6 +24,7 @@
     },
     "homepage": "https://github.com/alyxpele/gab#readme",
     "dependencies": {
+        "@base-ui-components/react": "^1.0.0-beta.3",
         "@tailwindcss/vite": "^4.1.13",
         "@tanstack/react-router": "^1.131.41",
         "@tanstack/react-start": "^1.131.43",
