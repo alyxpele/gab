@@ -1,11 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { getCount } from '@/server/actions/count'
-import Home from '@/components/pages/Home'
+import { delay } from '@/shared/utils'
+import CountPage from '@/components/pages/Count'
 
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
-
-export const Route = createFileRoute('/')({
-    component: Home,
+export const Route = createFileRoute('/count')({
+    component: CountPage,
     loader: async () => ({
         count: await getCount(),
         slowCount: delay(1000).then(() => getCount()),

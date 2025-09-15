@@ -1,4 +1,14 @@
 {
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.*.ts",
+        "*.tsx": "${capture}.*.tsx",
+    },
+    "files.readonlyInclude": {
+        "**/*.gen.ts": true,
+    },
+
     // tailwind
     "editor.quickSuggestions": {
         "strings": "on",
