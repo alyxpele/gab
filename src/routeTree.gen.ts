@@ -9,9 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as InboxRouteImport } from './routes/inbox'
 import { Route as CountRouteImport } from './routes/count'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as InboxIndexRouteImport } from './routes/inbox.index'
+import { Route as InboxIdRouteImport } from './routes/inbox.$id'
 
+const InboxRoute = InboxRouteImport.update({
+  id: '/inbox',
+  path: '/inbox',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CountRoute = CountRouteImport.update({
   id: '/count',
   path: '/count',
@@ -22,35 +30,61 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InboxIndexRoute = InboxIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => InboxRoute,
+} as any)
+const InboxIdRoute = InboxIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => InboxRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/count': typeof CountRoute
+  '/inbox': typeof InboxRouteWithChildren
+  '/inbox/$id': typeof InboxIdRoute
+  '/inbox/': typeof InboxIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/count': typeof CountRoute
+  '/inbox/$id': typeof InboxIdRoute
+  '/inbox': typeof InboxIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/count': typeof CountRoute
+  '/inbox': typeof InboxRouteWithChildren
+  '/inbox/$id': typeof InboxIdRoute
+  '/inbox/': typeof InboxIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/count'
+  fullPaths: '/' | '/count' | '/inbox' | '/inbox/$id' | '/inbox/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/count'
-  id: '__root__' | '/' | '/count'
+  to: '/' | '/count' | '/inbox/$id' | '/inbox'
+  id: '__root__' | '/' | '/count' | '/inbox' | '/inbox/$id' | '/inbox/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CountRoute: typeof CountRoute
+  InboxRoute: typeof InboxRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/inbox': {
+      id: '/inbox'
+      path: '/inbox'
+      fullPath: '/inbox'
+      preLoaderRoute: typeof InboxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/count': {
       id: '/count'
       path: '/count'
@@ -65,12 +99,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/inbox/': {
+      id: '/inbox/'
+      path: '/'
+      fullPath: '/inbox/'
+      preLoaderRoute: typeof InboxIndexRouteImport
+      parentRoute: typeof InboxRoute
+    }
+    '/inbox/$id': {
+      id: '/inbox/$id'
+      path: '/$id'
+      fullPath: '/inbox/$id'
+      preLoaderRoute: typeof InboxIdRouteImport
+      parentRoute: typeof InboxRoute
+    }
   }
 }
+
+interface InboxRouteChildren {
+  InboxIdRoute: typeof InboxIdRoute
+  InboxIndexRoute: typeof InboxIndexRoute
+}
+
+const InboxRouteChildren: InboxRouteChildren = {
+  InboxIdRoute: InboxIdRoute,
+  InboxIndexRoute: InboxIndexRoute,
+}
+
+const InboxRouteWithChildren = InboxRoute._addFileChildren(InboxRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CountRoute: CountRoute,
+  InboxRoute: InboxRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
