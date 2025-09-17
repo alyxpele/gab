@@ -3,6 +3,12 @@
  *  -> https://fonts.google.com/icons?icon.set=Material+Symbols
  */
 export const availableSymbols = [
+    'search',
+    'edit_square',
+    'chat_bubble',
+    'person',
+    'filter_list',
+    'check',
     'star',
     'more_time',
 ] as const

@@ -11,7 +11,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
             <head>
                 <HeadContent />
             </head>
-            <body suppressHydrationWarning>
+            <body suppressHydrationWarning className="min-h-dvh overflow-hidden">
                 {children}
                 <Scripts />
             </body>
