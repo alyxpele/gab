@@ -1,0 +1,78 @@
+[
+  {
+    "sender": {
+      "name": "Alice Johnson",
+      "email": "alice.johnson@acme.com"
+    },
+    "receiver": {
+      "name": "Bob Smith",
+      "email": "bob.smith@globex.com"
+    },
+    "date": "2024-06-10T09:15:00Z",
+    "subject": "Project Status Follow-up",
+    "content": "Hi Bob, just wanted to follow up on the project status. Let me know if you need anything from my side.",
+    "company": "Acme Corp",
+    "status": "to_validate"
+  },
+  {
+    "sender": {
+      "name": "Carol Lee",
+      "email": "carol.lee@initech.com"
+    },
+    "receiver": {
+      "name": "David Kim",
+      "email": "david.kim@umbrella.com"
+    },
+    "date": "2024-06-09T14:30:00Z",
+    "subject": "Latest Sales Report - June 2024",
+    "content": "Hello David, please find attached the latest sales report. Looking forward to your feedback.",
+    "company": "Initech",
+    "status": "done"
+  },
+  {
+    "sender": {
+      "name": "Eve Martinez",
+      "email": "eve.martinez@globex.com"
+    },
+    "receiver": {
+      "name": "Frank Wright",
+      "email": "frank.wright@acme.com"
+    },
+    "date": "2024-06-08T11:45:00Z",
+    "subject": "Meeting Reschedule Request",
+    "content": "Hi Frank, can we reschedule our meeting to next week? Let me know your availability.",
+    "company": "Globex Corporation",
+    "status": "vip"
+  },
+  {
+    "sender": {
+      "name": "Grace Hopper",
+      "email": "grace.hopper@umbrella.com"
+    },
+    "receiver": {
+      "name": "Henry Ford",
+      "email": "henry.ford@initech.com"
+    },
+    "date": "2024-06-07T16:20:00Z",
+    "subject": "Quarterly Review Preparation",
+    "content": "Henry, the quarterly review is coming up. Please prepare your department's summary.",
+    "company": "Umbrella Inc.",
+    "status": "to_validate"
+  },
+  {
+    "sender": {
+      "name": "Ivy Chen",
+      "email": "ivy.chen@acme.com"
+    },
+    "receiver": {
+      "name": "Jack Black",
+      "email": "jack.black@initech.com"
+    },
+    "date": "2024-06-06T08:05:00Z",
+    "subject": "Thank you for Client Presentation Support",
+    "content": "Jack, thank you for your help with the client presentation yesterday. Much appreciated!",
+    "company": "Acme Corp",
+    "status": "done"
+  }
+]
+
