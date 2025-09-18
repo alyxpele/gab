@@ -2,7 +2,7 @@ import type { MaterialSymbolName } from '@/assets/icons/materialSymbols'
 import { cva, type VariantProps } from '@/components/utils/cva.config'
 
 const styles = cva({
-    base: 'icon',
+    base: 'icon overflow-clip',
     variants: {
         variant: {
             outlined: 'icon-outlined',
@@ -28,19 +28,19 @@ const styles = cva({
             200: 'icon-emphasis',
         },
         opticalSize: {
-            20: 'icon-20',
-            24: 'icon-24',
-            40: 'icon-40',
-            48: 'icon-48',
+            20: 'icon-20 size-5',
+            24: 'icon-24 size-6',
+            40: 'icon-40 size-10',
+            48: 'icon-48 size-12',
         },
     },
-    // defaultVariants: {
-    //     variant: 'outlined',
-    //     filled: false,
-    //     weight: 400,
-    //     grade: 0,
-    //     opticalSize: 24,
-    // },
+    defaultVariants: {
+        // variant: 'outlined',
+        // filled: false,
+        // weight: 400,
+        // grade: 0,
+        opticalSize: 24,
+    },
 })
 
 export interface MaterialSymbolProps extends VariantProps<typeof styles>,
