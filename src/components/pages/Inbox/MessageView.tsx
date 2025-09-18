@@ -33,8 +33,9 @@ export default function MessageView() {
         toolbar: 'mt-6 p-0.5 flex items-center gap-px rounded-full border border-gray-200 bg-gray-50',
         toolbarSeparator: 'm-1 h-4 w-px bg-black/15',
         toolbarButton: 'flex h-10 px-3 items-center justify-center rounded-sm first:rounded-l-full first:rounded-r-md font-[inherit] text-sm font-medium text-black/70 select-none  cursor-pointer hover:bg-black/10 active:bg-black/15 transition-all duration-200 ease-in-out [&>span]:mr-2',
-        aiButton: 'flex ml-auto h-10 px-0.25 items-center justify-center rounded-full font-[inherit] text-sm font-medium cursor-pointer bg-linear-to-tr from-purple-400 to-pink-500',
-        aiButtonContent: 'h-9.5 px-3 items-center flex w-full text-purple-800/70 bg-white/80 hover:bg-white/70 active:bg-white/60 rounded-full [&>span]:mr-2 transition-all duration-200 ease-in-out',
+        aiButton: 'ml-auto h-10 rounded-full border-2 border-transparent text-sm font-medium bg-origin-border bg-linear-35 from-purple-400 to-rose-400 cursor-pointer hover:[&>span]:bg-white/70 active:[&>span]:bg-white/60',
+        aiButtonContent: 'h-full px-3 flex w-full bg-white/80 rounded-full transition-all duration-200 ease-in-out',
+        aiButtonText: '[&>span]:mr-2 flex items-center bg-linear-35 from-purple-500/80 to-rose-500/80 bg-clip-text text-transparent',
     })
 
     const status = (statuses.find((s) => s.value === message?.status))
@@ -112,8 +113,10 @@ export default function MessageView() {
                 </Toolbar.Button>
                 <Toolbar.Button className={classes.aiButton}>
                     <span className={classes.aiButtonContent}>
-                        <MaterialSymbol icon="star_shine" />
-                        Answer with AI
+                        <span className={classes.aiButtonText}>
+                            <MaterialSymbol icon="star_shine" variant="rounded" grade={-25} />
+                            Answer with AI
+                        </span>
                     </span>
                 </Toolbar.Button>
             </Toolbar.Root>
