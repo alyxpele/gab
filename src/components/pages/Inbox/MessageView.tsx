@@ -13,7 +13,7 @@ export default function MessageView() {
 
     const classes = rcx({
         rootContainer: 'h-full flex flex-col p-6 pt-8 ',
-        headerContainer: 'flex gap-4 items-baseline [&>div]:first:min-w-24 [&>div]:first:flex',
+        headerContainer: 'flex max-sm:flex-col min-md:max-lg:flex-col gap-4 items-baseline [&>div]:first:min-w-24 [&>div]:first:flex',
         titleContainer: 'flex flex-col items-start',
         title: 'text-xl font-semibold',
         folder: 'mt-0.5 px-2 py-0.5 rounded-md flex items-center gap-1 bg-black/8 text-black/50 text-xs',
@@ -26,16 +26,16 @@ export default function MessageView() {
         address: 'mt-0.5 px-2 py-0.5 rounded-md flex items-center gap-1 bg-black/8 text-black/50 font-medium text-xs',
         messageContent: 'mb-2 mt-3',
         textlink: 'text-black/40 decoration-black/40 underline cursor-pointer hover:text-black/60 hover:decoration-black/60',
-        avatar: 'inline-flex size-10 items-center justify-center overflow-hidden rounded-full bg-gray-100 align-middle text-base font-medium text-black select-none',
+        avatar: 'inline-flex size-10 min-w-10 items-center justify-center overflow-hidden rounded-full bg-gray-100 align-middle text-base font-medium text-black select-none',
         senderName: 'text-sm text-black/80 font-bold',
         date: 'text-sm text-black/50',
 
-        toolbar: 'mt-6 p-0.5 flex items-center gap-px rounded-full border border-gray-200 bg-gray-50',
+        toolbar: 'mt-6 p-0.5 w-full flex items-center gap-px rounded-full border border-gray-200 bg-gray-50',
         toolbarSeparator: 'm-1 h-4 w-px bg-black/15',
-        toolbarButton: 'flex h-10 px-3 items-center justify-center rounded-sm first:rounded-l-full first:rounded-r-md font-[inherit] text-sm font-medium text-black/70 select-none  cursor-pointer hover:bg-black/10 active:bg-black/15 transition-all duration-200 ease-in-out [&>span]:mr-2',
+        toolbarButton: 'flex h-10 px-3 items-center justify-center rounded-sm first:rounded-l-full first:rounded-r-md font-[inherit] text-sm font-medium text-black/70 select-none  cursor-pointer hover:bg-black/10 active:bg-black/15 transition-all duration-200 ease-in-out whitespace-nowrap min-lg:[&>span]:mr-2 max-[1130px]:[&>span]:last:hidden',
         aiButton: 'ml-auto h-10 rounded-full border-2 border-transparent text-sm font-medium bg-origin-border bg-linear-35 from-purple-400 to-rose-400 cursor-pointer hover:[&>span]:bg-white/70 active:[&>span]:bg-white/60',
         aiButtonContent: 'h-full px-3 flex w-full bg-white/80 rounded-full transition-all duration-200 ease-in-out',
-        aiButtonText: '[&>span]:mr-2 flex items-center bg-linear-35 from-purple-500/80 to-rose-500/80 bg-clip-text text-transparent',
+        aiButtonText: 'flex items-center bg-linear-35 from-purple-500/80 to-rose-500/80 bg-clip-text text-transparent [&>span]:mr-2 max-[460px]:[&>span]:mr-0 min-md:max-[880px]:[&>span]:mr-0 max-[460px]:[&>span]:last:hidden min-md:max-[880px]:[&>span]:last:hidden whitespace-nowrap',
     })
 
     const status = (statuses.find((s) => s.value === message?.status))
@@ -94,28 +94,28 @@ export default function MessageView() {
             <Toolbar.Root className={classes.toolbar}>
                 <Toolbar.Button className={classes.toolbarButton}>
                     <MaterialSymbol icon="reply_all" />
-                    Reply all
+                    <span>Reply all</span>
                 </Toolbar.Button>
                 <Toolbar.Separator className={classes.toolbarSeparator} />
                 <Toolbar.Button className={classes.toolbarButton}>
                     <MaterialSymbol icon="reply" />
-                    Reply
+                    <span>Reply</span>
                 </Toolbar.Button>
                 <Toolbar.Separator className={classes.toolbarSeparator} />
                 <Toolbar.Button className={classes.toolbarButton}>
                     <MaterialSymbol icon="forward" />
-                    Forward
+                    <span>Forward</span>
                 </Toolbar.Button>
                 <Toolbar.Separator className={classes.toolbarSeparator} />
                 <Toolbar.Button className={classes.toolbarButton}>
                     <MaterialSymbol icon="call" />
-                    Call note
+                    <span>Call note</span>
                 </Toolbar.Button>
                 <Toolbar.Button className={classes.aiButton}>
                     <span className={classes.aiButtonContent}>
                         <span className={classes.aiButtonText}>
                             <MaterialSymbol icon="star_shine" variant="rounded" grade={-25} />
-                            Answer with AI
+                            <span>Answer with AI</span>
                         </span>
                     </span>
                 </Toolbar.Button>
