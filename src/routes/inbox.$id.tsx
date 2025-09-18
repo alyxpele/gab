@@ -1,23 +1,10 @@
-import { createFileRoute, getRouteApi, Link } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
+import { getMessage } from '@/server/actions/messages'
+import MessageViewPage from '@/components/pages/Inbox/MessageView'
 
 export const Route = createFileRoute('/inbox/$id')({
-    component: RouteComponent,
+    component: MessageViewPage,
+    loader: async (route) => ({
+        message: await getMessage({ data: route.params.id }),
+    }),
 })
-
-function RouteComponent() {
-    const routeApi = getRouteApi('/inbox/$id')
-    const { id } = routeApi.useParams()
-
-    return (
-        <div className="flex flex-col my-4 p-4 border border-pink-500">
-            <Link to="/inbox" className="hover:bg-neutral-100 border border-pink-500">
-                Back
-            </Link>
-            <div className="grow flex flex-col flex-nowrap">
-                <span className="text-wrap break-all">
-                    Hello /inbox/{id}!
-                </span>
-            </div>
-        </div>
-    )
-}
