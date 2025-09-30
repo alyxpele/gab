@@ -21,7 +21,7 @@ const getMessages = createServerFn({
 const getMessage = createServerFn({
     method: 'GET',
 })
-    .validator((data: string) => data)
+    .inputValidator((data: string) => data)
     .handler(async (ctx) => {
         return (await getMessages()).find((m) => m.id === ctx.data)
     })

@@ -4,6 +4,7 @@ import {
     HeadContent,
     Scripts,
 } from '@tanstack/react-router'
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     return (
@@ -23,6 +24,7 @@ export function RootComponent() {
     return (
         <RootDocument>
             <Outlet />
+            <TanStackRouterDevtools position="bottom-right" />
         </RootDocument>
     )
 }

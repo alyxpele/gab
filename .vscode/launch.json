@@ -2,8 +2,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "client",
+            "name": "client - chrome",
             "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "internalConsoleOptions": "openOnSessionStart",
+        },
+        {
+            "name": "client - firefox",
+            "type": "firefox",
             "request": "launch",
             "url": "http://localhost:3000",
             "internalConsoleOptions": "openOnSessionStart",

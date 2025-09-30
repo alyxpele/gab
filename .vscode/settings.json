@@ -5,6 +5,13 @@
         "*.ts": "${capture}.*.ts",
         "*.tsx": "${capture}.*.tsx",
     },
+    "files.watcherExclude": {
+        "**/*.gen.ts": true
+    },
+    "search.exclude": {
+        "**/*.gen.ts": true,
+        "package-lock.json": true,
+    },
     "files.readonlyInclude": {
         "**/*.gen.ts": true,
     },
