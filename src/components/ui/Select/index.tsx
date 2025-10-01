@@ -3,16 +3,16 @@ import { MaterialSymbolName } from '@/assets/icons/materialSymbols'
 import { MaterialSymbol } from '../MaterialSymbols'
 import { rcx } from '@/components/utils/cva.config'
 
-export interface SelectProps<T, U extends boolean | undefined>
+export interface SelectProps<T, U extends boolean | undefined = false>
     extends React.ComponentProps<typeof BaseSelect.Root<T, U>>
 {
     icon?: MaterialSymbolName,
-    renderValue?: (value: Array<T> | T) => React.ReactNode,
+    renderValue?: (value: U extends false | undefined ? T | null : ReadonlyArray<T>) => React.ReactNode,
     useRenderValueInPoppup?: boolean,
     classes?: Partial<Record<'trigger' | 'value' | 'icon' | 'positioner' | 'popup' | 'item' | 'itemIndicator', string>>,
 }
 
-export const Select = <T extends string, U extends boolean | undefined>(props: SelectProps<T, U>) => {
+export const Select = <T extends string, U extends boolean | undefined = false>(props: SelectProps<T, U>) => {
     const {
         icon,
         renderValue,
@@ -56,7 +56,8 @@ export const Select = <T extends string, U extends boolean | undefined>(props: S
                             <BaseSelect.Item key={value} value={value} className={classes.item}>
                                 <BaseSelect.ItemText>
                                     {useRenderValueInPoppup && renderValue ? (
-                                        renderValue(props.multiple ? [value] : value)
+                                        renderValue((props.multiple ? [value] : value
+                                        ) as U extends false | undefined ? T | null : ReadonlyArray<T>)
                                     ) : label}
                                 </BaseSelect.ItemText>
                                 <BaseSelect.ItemIndicator className={classes.itemIndicator}>

@@ -85,7 +85,7 @@ export default function Inbox() {
                         <Select
                             multiple
                             icon="filter_list"
-                            items={statuses as unknown as Array<{ label: React.ReactNode, value: string }>}
+                            items={statuses}
                             value={filters}
                             onValueChange={setFilters}
                             renderValue={(filters) => (
