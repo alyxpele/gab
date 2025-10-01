@@ -12,8 +12,8 @@ export interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
 export const IconButton = (props: IconButtonProps) => {
     const { icon, size = 'md', classes: classesOverrides, ...rest } = props
     const classes = rcx({
-        container: 'rounded-full cursor-pointer hover:bg-black/10 active:bg-black/15 transition-all duration-200 ease-in-out',
-        icon: cx('text-center content-center text-black/50', size === 'md' ? 'size-12' : 'size-10'),
+        container: cx('rounded-full flex items-center justify-center cursor-pointer hover:bg-black/10 active:bg-black/15 transition-all duration-200 ease-in-out', size === 'md' ? 'size-12' : 'size-10'),
+        icon: 'text-center content-center text-black/50',
     }, classesOverrides)
 
     return (

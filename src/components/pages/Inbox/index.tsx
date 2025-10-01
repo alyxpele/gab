@@ -26,7 +26,7 @@ export default function Inbox() {
 
     const classes = rcx({
         rootContainer: 'flex gap-2 bg-neutral-800 p-2 w-full h-screen',
-        leftPane: '@container/left-pane bg-gray-200 border border-white rounded-lg w-full md:w-96 md:min-w-96 h-full p-8',
+        leftPane: '@container bg-gray-200 border border-white rounded-lg w-full md:w-96 md:min-w-96 h-full p-8',
         rightPane: 'grow bg-white border border-white rounded-lg',
 
         titleRoot: 'flex mb-4',
@@ -36,15 +36,15 @@ export default function Inbox() {
         subtitle: 'text-sm text-black/50',
 
         tabsRoot: '',
-        tabList: 'mb-2 relative z-0 flex gap-2 @sm/left-pane:justify-start justify-between rounded-full border border-white bg-black/5',
+        tabList: 'mb-2 relative z-0 flex gap-2 @sm:justify-start justify-between rounded-full border border-white bg-black/5',
         tabItem: 'px-6 flex h-12 items-center justify-center text-sm font-medium break-keep whitespace-nowrap rounded-full text-black/60 hover:text-black/80 hover:bg-black/10 active:bg-black/15 transition-all duration-200 ease-in-out data-[selected]:text-white',
         selectedTabIndicator: 'absolute top-1/2 left-0 z-[-1] h-full w-[var(--active-tab-width)] translate-x-[var(--active-tab-left)] -translate-y-1/2 rounded-full bg-black transition-all duration-200 ease-in-out',
         panel: '',
 
         scrollRoot: 'mr-[calc(var(--spacing)*-2)] h-[calc(100vh-calc(var(--spacing)*60))] mask-b-from-90%',
         scrollViewport: 'h-full overscroll-contain',
-        messageList: ' mr-2 pb-8 [&>li]:not-last:mb-4',
-        scrollbar: 'flex w-1 justify-center rounded bg-white/70 opacity-0 transition-opacity delay-300 data-[hovering]:opacity-100 data-[hovering]:delay-0 data-[hovering]:duration-75 data-[scrolling]:opacity-100 data-[scrolling]:delay-0 data-[scrolling]:duration-75',
+        messageList: 'mr-2 pb-8 [&>li]:not-last:mb-4',
+        scrollbar: 'flex w-1 justify-center rounded bg-white/70 opacity-0 transition-opacity delay-300 data-[hovering]:opacity-100 data-[hovering]:delay-0 data-[hovering]:duration-75 data-[scrolling]:opacity-100 data-[scrolling]:delay-0 data-[scrolling]:duration-75 mb-8',
         scrollthumb: 'w-full rounded bg-black/40',
     })
 

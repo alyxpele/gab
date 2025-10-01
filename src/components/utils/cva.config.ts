@@ -15,10 +15,12 @@ export const { cva, cx, compose } = defineConfig({
             if (res !== className) {
                 const A = className.split(' ')
                 const B = res.split(' ')
-                console.debug('[twMerge]', A.filter((x) => !B.includes(x)), '->', B.filter((x) => !A.includes(x)))
+                console.groupCollapsed('[twMerge]', A.filter((x) => !B.includes(x)), '->', B.filter((x) => !A.includes(x)))
+                console.trace()
+                console.groupEnd()
             }
             return res
-        } : (className) => twMerge(className),
+        } : twMerge,
     },
 })
 

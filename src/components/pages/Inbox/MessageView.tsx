@@ -12,7 +12,7 @@ export default function MessageView() {
     const navigate = useNavigate({ from: '/inbox/$id' })
 
     const classes = rcx({
-        rootContainer: 'h-full flex flex-col p-6 pt-8 ',
+        rootContainer: 'h-full flex flex-col p-6 pt-8',
         headerContainer: 'flex max-sm:flex-col min-md:max-lg:flex-col gap-4 items-baseline [&>div]:first:min-w-24 [&>div]:first:flex',
         titleContainer: 'flex flex-col items-start',
         title: 'text-xl font-semibold',
@@ -32,7 +32,7 @@ export default function MessageView() {
 
         toolbar: 'mt-6 p-0.5 w-full flex items-center gap-px rounded-full border border-gray-200 bg-gray-50',
         toolbarSeparator: 'm-1 h-4 w-px bg-black/15',
-        toolbarButton: 'flex h-10 px-3 items-center justify-center rounded-sm first:rounded-l-full first:rounded-r-md font-[inherit] text-sm font-medium text-black/70 select-none  cursor-pointer hover:bg-black/10 active:bg-black/15 transition-all duration-200 ease-in-out whitespace-nowrap min-lg:[&>span]:mr-2 max-[1130px]:[&>span]:last:hidden',
+        toolbarButton: 'flex h-10 px-3 items-center justify-center rounded-sm first:rounded-l-[calc(var(--spacing)*5)] font-[inherit] text-sm font-medium text-black/70 select-none cursor-pointer hover:bg-black/10 active:bg-black/15 transition-all duration-200 ease-in-out whitespace-nowrap min-[1130px]:[&>span]:mr-2 max-[1130px]:[&>span]:last:hidden',
         aiButton: 'ml-auto h-10 rounded-full border-2 border-transparent text-sm font-medium bg-origin-border bg-linear-35 from-purple-400 to-rose-400 cursor-pointer hover:[&>span]:bg-white/70 active:[&>span]:bg-white/60',
         aiButtonContent: 'h-full px-3 flex w-full bg-white/80 rounded-full transition-all duration-200 ease-in-out',
         aiButtonText: 'flex items-center bg-linear-35 from-purple-500/80 to-rose-500/80 bg-clip-text text-transparent [&>span]:mr-2 max-[460px]:[&>span]:mr-0 min-md:max-[880px]:[&>span]:mr-0 max-[460px]:[&>span]:last:hidden min-md:max-[880px]:[&>span]:last:hidden whitespace-nowrap',
