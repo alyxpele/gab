@@ -50,6 +50,7 @@
         "eslint-plugin-react-hooks": "^6.0.0-rc.2",
         "typescript": "^5.9.2",
         "typescript-eslint": "^8.45.0",
-        "vite-tsconfig-paths": "^5.1.4"
+        "vite-tsconfig-paths": "^5.1.4",
+        "vitest": "^3.2.4"
     }
 }
