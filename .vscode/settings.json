@@ -52,6 +52,7 @@
     },
 
     // cSpell
+    "cSpell.allowCompoundWords": false,
     "cSpell.words": [
         "savaryna",
     ]

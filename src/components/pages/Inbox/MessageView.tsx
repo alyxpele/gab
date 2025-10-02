@@ -25,7 +25,7 @@ export default function MessageView() {
         addressContainer: 'flex items-baseline gap-4 text-black/50 text-xs',
         address: 'mt-0.5 px-2 py-0.5 rounded-md flex items-center gap-1 bg-black/8 text-black/50 font-medium text-xs',
         messageContent: 'mb-2 mt-3',
-        textlink: 'text-black/40 decoration-black/40 underline cursor-pointer hover:text-black/60 hover:decoration-black/60',
+        textLink: 'text-black/40 decoration-black/40 underline cursor-pointer hover:text-black/60 hover:decoration-black/60',
         avatar: 'inline-flex size-10 min-w-10 items-center justify-center overflow-hidden rounded-full bg-gray-100 align-middle text-base font-medium text-black select-none',
         senderName: 'text-sm text-black/80 font-bold',
         date: 'text-sm text-black/50',
@@ -82,7 +82,7 @@ export default function MessageView() {
                                 <span className={classes.address}>{message?.receiver.name}</span>
                             </div>
                             <p className={classes.messageContent}>{message?.content}</p>
-                            <a className={classes.textlink}>Open original message</a>
+                            <a className={classes.textLink}>Open original message</a>
                         </div>
                         <div>
                             <span className={classes.senderName}>{message?.sender.name}</span>

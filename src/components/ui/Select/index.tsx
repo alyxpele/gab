@@ -8,7 +8,7 @@ export interface SelectProps<T, U extends boolean | undefined = false>
 {
     icon?: MaterialSymbolName,
     renderValue?: (value: U extends false | undefined ? T | null : ReadonlyArray<T>) => React.ReactNode,
-    useRenderValueInPoppup?: boolean,
+    useRenderValueInPopup?: boolean,
     classes?: Partial<Record<'trigger' | 'value' | 'icon' | 'positioner' | 'popup' | 'item' | 'itemIndicator', string>>,
 }
 
@@ -16,7 +16,7 @@ export const Select = <T extends string, U extends boolean | undefined = false>(
     const {
         icon,
         renderValue,
-        useRenderValueInPoppup = false,
+        useRenderValueInPopup = false,
         classes: classOverrides,
         ...rest
     } = props
@@ -55,7 +55,7 @@ export const Select = <T extends string, U extends boolean | undefined = false>(
                         {items.map(({ value, label }) => (
                             <BaseSelect.Item key={value} value={value} className={classes.item}>
                                 <BaseSelect.ItemText>
-                                    {useRenderValueInPoppup && renderValue ? (
+                                    {useRenderValueInPopup && renderValue ? (
                                         renderValue((props.multiple ? [value] : value
                                         ) as U extends false | undefined ? T | null : ReadonlyArray<T>)
                                     ) : label}
