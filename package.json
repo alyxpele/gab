@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "vite dev",
         "build": "vite build",
-        "preview": "vite preview",
+        "start": "node .output/server/index.mjs",
         "lint": "eslint src/",
         "lint:fix": "eslint src/ --fix",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,22 +25,23 @@
     "homepage": "https://github.com/alyxpele/gab#readme",
     "dependencies": {
         "@base-ui-components/react": "^1.0.0-beta.4",
-        "@tailwindcss/vite": "^4.1.13",
-        "@tanstack/react-router": "^1.132.26",
-        "@tanstack/react-router-devtools": "^1.132.26",
-        "@tanstack/react-start": "^1.132.26",
+        "@tailwindcss/vite": "^4.1.14",
+        "@tanstack/nitro-v2-vite-plugin": "^1.132.31",
+        "@tanstack/react-router": "^1.132.31",
+        "@tanstack/react-router-devtools": "^1.132.31",
+        "@tanstack/react-start": "^1.132.31",
         "cva": "^1.0.0-beta.4",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
         "tailwind-merge": "^3.3.1",
-        "tailwindcss": "^4.1.13",
-        "vite": "^7.1.7"
+        "tailwindcss": "^4.1.14",
+        "vite": "^7.1.8"
     },
     "devDependencies": {
-        "@eslint/js": "^9.35.0",
+        "@eslint/js": "^9.36.0",
         "@savaryna/tailwindcss-material-symbols": "^1.3.0",
         "@stylistic/eslint-plugin": "^5.4.0",
-        "@types/node": "^24.6.0",
+        "@types/node": "^24.6.2",
         "@types/react": "^19.2.0",
         "@types/react-dom": "^19.2.0",
         "@vitejs/plugin-react": "^5.0.4",
@@ -48,7 +49,7 @@
         "eslint": "^9.36.0",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^6.1.0",
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
         "typescript-eslint": "^8.45.0",
         "vite-tsconfig-paths": "^5.1.4",
         "vitest": "^3.2.4"
