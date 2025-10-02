@@ -1,8 +1,8 @@
-import crypto from 'crypto'
 import { createServerFn } from '@tanstack/react-start'
-import mails from '@/server/data/emails.json'
-import { delay } from '@/shared/utils'
-import type { Message } from '@/shared/messages'
+import crypto from 'crypto'
+import mails from '~/server/data/emails.json'
+import type { Message } from '~/shared/messages'
+import { delay } from '~/shared/utils'
 
 function hash(data: object) {
     const hash = crypto.createHash('sha-1')
@@ -27,6 +27,6 @@ const getMessage = createServerFn({
     })
 
 export {
-    getMessages,
-    getMessage,
+    getMessage, getMessages
 }
+

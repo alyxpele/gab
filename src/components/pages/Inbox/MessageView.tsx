@@ -1,10 +1,10 @@
-import { getRouteApi, useNavigate } from '@tanstack/react-router'
 import { Avatar, Separator, Toolbar } from '@base-ui-components/react'
-import { rcx } from '@/components/utils/cva.config'
-import { Badge } from '@/components/ui/Badge'
-import { statuses } from '@/shared/messages'
-import { MaterialSymbol } from '@/components/ui/MaterialSymbols'
-import { IconButton } from '@/components/ui/IconButton'
+import { getRouteApi, useNavigate } from '@tanstack/react-router'
+import { Badge } from '~/components/ui/Badge'
+import { IconButton } from '~/components/ui/IconButton'
+import { MaterialSymbol } from '~/components/ui/MaterialSymbols'
+import { rcx } from '~/components/utils/cva.config'
+import { statuses } from '~/shared/messages'
 
 export default function MessageView() {
     const routeApi = getRouteApi('/inbox/$id')

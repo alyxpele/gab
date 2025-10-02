@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { getMessage } from '@/server/actions/messages'
-import MessageViewPage from '@/components/pages/Inbox/MessageView'
+import MessageViewPage from '~/components/pages/Inbox/MessageView'
+import { getMessage } from '~/server/actions/messages'
 
 export const Route = createFileRoute('/inbox/$id')({
     component: MessageViewPage,

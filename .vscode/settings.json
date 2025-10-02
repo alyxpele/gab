@@ -39,9 +39,10 @@
     ],
 
     // eslint
-    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "explicit",
+        "source.addMissingImports": "explicit",
     },
     "eslint.codeAction.showDocumentation": {
         "enable": true
@@ -54,6 +55,5 @@
     // cSpell
     "cSpell.allowCompoundWords": false,
     "cSpell.words": [
-        "savaryna",
     ]
 }

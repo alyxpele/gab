@@ -1,7 +1,7 @@
-import { Link } from '@tanstack/react-router'
 import { Separator } from '@base-ui-components/react'
-import { statuses, type Message } from '@/shared/messages'
-import { cva, rcx } from '@/components/utils/cva.config'
+import { Link } from '@tanstack/react-router'
+import { cva, rcx } from '~/components/utils/cva.config'
+import { statuses, type Message } from '~/shared/messages'
 
 export const MessageListItem = ({ message }: { message: WithId<Message> }) => {
     const classes = rcx({

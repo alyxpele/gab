@@ -1,4 +1,4 @@
-import { availableSymbols } from '@/assets/icons/materialSymbols'
+import { availableSymbols } from '~/assets/icons/materialSymbols'
 
 const icon_names = availableSymbols.concat()
     .sort((a, b) => a.localeCompare(b))

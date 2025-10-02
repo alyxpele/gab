@@ -1,5 +1,5 @@
 import React from 'react'
-import { cva, cx, type VariantProps } from '@/components/utils/cva.config'
+import { cva, cx, type VariantProps } from '~/components/utils/cva.config'
 
 const styles = cva({
     base: 'py-1 px-3 rounded-full border flex justify-start gap-1.5 items-center [&>div]:size-2 [&>div]:rounded-xs break-keep whitespace-nowrap font-bold text-sm text-black/80',

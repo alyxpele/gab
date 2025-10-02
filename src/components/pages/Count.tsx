@@ -1,7 +1,7 @@
-import { Suspense, use } from 'react'
 import { getRouteApi, useRouter } from '@tanstack/react-router'
-import { updateCount } from '@/server/actions/count'
-import { MaterialSymbol } from '@/components/ui/MaterialSymbols'
+import { Suspense, use } from 'react'
+import { MaterialSymbol } from '~/components/ui/MaterialSymbols'
+import { updateCount } from '~/server/actions/count'
 
 const ButtonText = (props: { promise: Promise<number> }) => {
     const count = use(props.promise)

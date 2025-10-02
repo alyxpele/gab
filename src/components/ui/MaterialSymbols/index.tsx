@@ -1,5 +1,5 @@
-import type { MaterialSymbolName } from '@/assets/icons/materialSymbols'
-import { cva, type VariantProps } from '@/components/utils/cva.config'
+import type { MaterialSymbolName } from '~/assets/icons/materialSymbols'
+import { cva, type VariantProps } from '~/components/utils/cva.config'
 
 const styles = cva({
     base: 'icon overflow-clip',

@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { getCount } from '@/server/actions/count'
-import { delay } from '@/shared/utils'
-import CountPage from '@/components/pages/Count'
+import CountPage from '~/components/pages/Count'
+import { getCount } from '~/server/actions/count'
+import { delay } from '~/shared/utils'
 
 export const Route = createFileRoute('/count')({
     component: CountPage,

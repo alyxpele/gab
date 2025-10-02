@@ -1,7 +1,7 @@
 import React from 'react'
-import type { MaterialSymbolName } from '@/assets/icons/materialSymbols'
+import type { MaterialSymbolName } from '~/assets/icons/materialSymbols'
+import { cx, rcx } from '~/components/utils/cva.config'
 import { MaterialSymbol } from '../MaterialSymbols'
-import { cx, rcx } from '@/components/utils/cva.config'
 
 export interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     icon: MaterialSymbolName,

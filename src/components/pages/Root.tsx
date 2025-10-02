@@ -1,10 +1,10 @@
-import type { ReactNode } from 'react'
 import {
-    Outlet,
     HeadContent,
+    Outlet,
     Scripts,
 } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+import type { ReactNode } from 'react'
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     return (

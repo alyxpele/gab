@@ -1,7 +1,7 @@
 import { Select as BaseSelect } from '@base-ui-components/react'
-import { MaterialSymbolName } from '@/assets/icons/materialSymbols'
+import { MaterialSymbolName } from '~/assets/icons/materialSymbols'
+import { rcx } from '~/components/utils/cva.config'
 import { MaterialSymbol } from '../MaterialSymbols'
-import { rcx } from '@/components/utils/cva.config'
 
 export interface SelectProps<T, U extends boolean | undefined = false>
     extends React.ComponentProps<typeof BaseSelect.Root<T, U>>
