@@ -11,11 +11,8 @@ export default defineConfig([
     tseslint.configs.stylisticTypeChecked,
     react.configs.flat.recommended,
     react.configs.flat['jsx-runtime'],
-    // reactHooks.configs['flat/recommended'],
-    {
-        plugins: { 'react-hooks': reactHooks },
-        rules: { ...reactHooks.configs.recommended.rules },
-    },
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    reactHooks.configs['flat/recommended'],
     stylistic.configs.customize({
         indent: 4,
         quotes: 'single',
