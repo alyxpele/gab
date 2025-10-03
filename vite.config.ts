@@ -14,7 +14,7 @@ export default defineConfig({
             projects: ['./tsconfig.json'],
         }),
         tanstackStart(),
-        nitroV2Plugin(),
+        nitroV2Plugin({ compressPublicAssets: { gzip: true } }),
         react({
             babel: {
                 plugins: ['babel-plugin-react-compiler'],
