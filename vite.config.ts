@@ -1,5 +1,5 @@
+import netlify from '@netlify/vite-plugin-tanstack-start'
 import tailwindcss from '@tailwindcss/vite'
-import { nitroV2Plugin } from '@tanstack/nitro-v2-vite-plugin'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
@@ -14,7 +14,7 @@ export default defineConfig({
             projects: ['./tsconfig.json'],
         }),
         tanstackStart(),
-        nitroV2Plugin({ compressPublicAssets: { gzip: true } }),
+        netlify(),
         react({
             babel: {
                 plugins: ['babel-plugin-react-compiler'],

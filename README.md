@@ -7,9 +7,9 @@ latest react features, as well as my abilities and practices.
 
 ## Deployment
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d5364049-ca01-42fd-af89-857185939dee/deploy-status)](https://app.netlify.com/projects/serene-quokka-5353a2/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d5364049-ca01-42fd-af89-857185939dee/deploy-status)](https://app.netlify.com/projects/gab-project/deploys)
 
-[Link to deployed app](https://serene-quokka-5353a2.netlify.app/)
+[Link to deployed app](https://gab-project.netlify.app/)
 
 ## Features
 
